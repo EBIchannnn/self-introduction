@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/self.css">
+    <link rel="stylesheet" href="../CSS/class.css">
+    <title>自己紹介サイト：自己紹介ページ</title>
+</head>
+<body>
+    
+    <h1>自己紹介</h1>
+    <table border="5">
+        <tr>
+            <th>苗字</th><td>海老塚</td>
+        </tr>
+        <tr>
+            <th>名前</th><td>侑希</td>
+        </tr>
+        <tr>
+            <th>出身</th><td>埼玉県</td>
+        </tr>
+    </table>
+
+    <!-- タブメニュー -->
+    <div class="tab-menu">
+        <button class="tab active" data-tab="hobby">趣味</button>
+        <button class="tab" data-tab="sports">スポーツ</button>
+        <button class="tab" data-tab="music">音楽</button>
+    </div>
+    <!-- タブコンテンツ -->
+    <div class="tab-content active" id="hobby">
+        <h2>趣味</h2>
+        <div class="photo-list">
+            <img src="../img/hobby1.jpg" alt="趣味1">
+            <img src="../img/hobby2.jpg" alt="趣味2">
+        </div>
+    </div>
+    <div class="tab-content" id="sports">
+        <h2>スポーツ</h2>
+        <div class="photo-list">
+            <img src="../img/sports1.jpg" alt="スポーツ1">
+            <img src="../img/sports2.jpg" alt="スポーツ2">
+        </div>
+    </div>
+    <div class="tab-content" id="music">
+        <h2>音楽</h2>
+        <div class="photo-list">
+            <img src="../img/music1.jpg" alt="音楽1">
+            <img src="../img/music2.jpg" alt="音楽2">
+        </div>
+    </div>
+    <button class="back" onclick="location.href='./index.html'">戻る</button>
+    <script src="../JS/self.js"></script>
+</body>
+</html>

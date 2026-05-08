@@ -1,0 +1,115 @@
+@charset "utf-8";
+body {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(.77,0,.18,1);
+  /* background-imageは削除 */
+  /* background-image: url(../img/a.webp); */
+  /* background-size: 100vw 100vh; */
+  /* background-color:rgba(172, 162, 121, 0.281); */
+  /* background-blend-mode:lighten; */
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url(../img/a.webp);
+  background-size: 100vw 100vh;
+  background-color: rgba(172, 162, 121, 0.281);
+  background-blend-mode: lighten;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(.77,0,.18,1);
+  pointer-events: none;
+}
+
+body.loaded {
+  opacity: 1;
+}
+body.loaded::before {
+  opacity: 1;
+}
+#name{
+   text-align: center;
+   color: rgb(0, 0, 0);
+   font-family: "Zen Old Mincho", serif;
+   font-weight:500;
+   font-size: 13vw;
+   text-shadow:8px 8px 3px #ffffff;
+   margin: 15vh 0 10vh 0;
+   -webkit-text-stroke-width:2px;
+   -webkit-text-stroke-color: black;
+}
+/* #test{
+    height: 50vh;
+    background: blue;
+} */
+#link_box{
+   background-image: url(../img/maru3.png);
+   background-size: 50% 50%;
+   background-repeat: no-repeat;
+   background-position: center;
+   /* background-color: red; */
+   height: 150px;
+}
+#go_self,#go_submit{
+   height:max-content;
+   width: max-content;
+   border-radius:50px;
+   position: absolute;
+   padding: 8px;
+}
+#go_self:hover,#go_submit:hover{
+   cursor: pointer;
+}
+#go_self:disabled,#go_submit:disabled{
+   background-color: rgba(0, 0, 0, 0.5);
+   color: rgb(184, 184, 184);
+   cursor: not-allowed;
+}
+
+#go_submit{
+   font-size: 10px;
+   /* left: 0;
+   top: 12px; */
+   left:0px;
+   top: 0px;
+   /* display: none; */
+}
+#go_self{
+   font-size: 20px;
+   /* left: 0px;
+   top:52px; */
+   left:0px;
+   top:0px;
+   /* display: none; */
+}
+#button_box{
+   padding: 10px;
+   text-align: center;
+}
+#change{
+   width: 100px;
+   height: 100px;
+   background-color: rgba(0, 36, 238, 0.685);
+   color: white;
+   font-size: 20px;
+   border-radius: 50%;
+   text-align: center;
+   cursor: pointer;
+   transition: transform 0.4s cubic-bezier(.77,0,.18,1), box-shadow 0.4s;
+}
+#change:hover{
+   background-color: rgba(0, 36, 238, 0.9);
+   transform: translateY(-4px) scale(1.05) rotate(-2deg);
+   box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+#change:disabled{
+   background-color: rgba(0, 36, 238, 0.5);
+   color: rgb(184, 184, 184);
+   cursor: not-allowed;
+}
+#test{
+   display: none;
+}

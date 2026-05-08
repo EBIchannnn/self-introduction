@@ -1,0 +1,12 @@
+@charset "utf-8";
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #aab0ff6c;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(.77,0,.18,1);
+}
+body.loaded {
+  opacity: 1;
+}
